@@ -131,7 +131,7 @@ text-decoration: underline;
     padding: 10px 13px;
     border-radius: 5px;
     cursor: pointer;
-    background: url(/public/images/bottom_black.png) right 16px center no-repeat transparent;
+    background: url(../images/bottom_black.png) right 16px center no-repeat transparent;
     background-size: 12px 6px;
     border: 1px solid #ddd;
     color: #777;
@@ -238,7 +238,108 @@ text-decoration: underline;
 .block02 .step p{
     font-size: 1.2rem;
 }
-
+.block02 .step.--spec{
+    text-align:left;
+}
+.block02 .step.--spec figure{
+    text-align: center;
+}
+.block02 .step.--spec figure img{
+max-width: 100%;
+width:auto;
+}
+.block02 .step.--spec figure small{
+    display: block;
+}
+/* section intro  */
+.block-intro{
+    margin-top: 5rem;
+}
+.block-intro ul{
+    list-style: none;
+}
+.block-intro ul li img{
+    width: 19px;
+    height: 19px;
+    margin-right:5px;
+}
+.block-intro .row{
+    align-items: center;
+}
+.block-intro .left{
+    flex:70% 0 0;
+}
+.block-intro .right{
+    flex:30% 0 0;
+}
+.block-intro2{
+    margin-top:3rem;
+    padding:4rem 0;
+    background: #00ba51;
+    color:#fff;
+}
+.block-intro2 .row{
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+}
+.block-intro2 .intro-right p{
+    margin:0;
+    font-size: 1.2rem;
+}
+.block-intro2 .intro-right p+p{
+    font-size: 1.8rem;
+}
+.block-intro2 .intro-right p i{
+    margin-right: 15px;
+}
+.block-intro2 .intro-right .btn{
+    margin-left: 20px;
+    margin-top:-25px;
+}
+.block-intro3{
+    background: url(../images/dg-dl-grab-back.jpg)no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.block-intro3{
+    padding:5rem;
+    color:#fff;
+}
+.block-intro3 h2{
+    text-align: center;
+    font-weight: bold;
+}
+.block-intro3{
+    padding:5rem;
+    color:#fff;
+}
+.block-intro3 h3{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-align: center
+}
+.block-intro3 h3 span{
+    display: block;
+    font-size: 3rem;
+}
+@media screen and (max-width:1024px){
+    .block-intro{
+        margin-top: 2rem;
+        padding:0 20px;
+    }
+    .block-intro .row{
+        flex-direction: column-reverse;
+        -webkit-flex-direction: column-reverse;
+    }
+    .block-intro2{
+        text-align: center;
+    }
+    .block-intro2 .intro-right{
+        margin-top:2rem;
+    }
+}
 /* câu hỏi thường gặp */
 .block03{
     margin-top:100px;

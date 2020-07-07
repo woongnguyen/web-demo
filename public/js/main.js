@@ -8,6 +8,7 @@
         init: function(){
             this.registerSubmit();
             this.initScrollTop();
+            this.numeffect();
         },
         registerSubmit: function(){
             $('#form-dang-ky').submit( function(e){
@@ -55,6 +56,45 @@
                 return false;
             });
         },
+        numeffect:function(){
+            function easeOutExpo(x) {
+                return x === 1 ? 1 : 1 - Math.pow(2, -10 * x);
+              }
+              
+              function animateNumber(finalNumber, duration = 5000, startNumber = 0, callback) {
+                const startTime = performance.now()
+                function updateNumber(currentTime) {
+                  const elapsedTime = currentTime - startTime
+                  if (elapsedTime > duration) {
+                    callback(finalNumber)
+                  } else {
+                    const timeRate = (1.0 * elapsedTime) / duration
+                    const numberRate = easeOutExpo(timeRate)
+                    const currentNumber = Math.round(numberRate * finalNumber)
+                    callback(currentNumber)
+                    requestAnimationFrame(updateNumber)
+                  }
+                }
+                requestAnimationFrame(updateNumber)
+              }
+              
+              document.addEventListener('DOMContentLoaded', function () {
+                animateNumber(4530, 3000, 0, function (number) {
+                  const formattedNumber = number.toLocaleString()
+                  document.getElementById('cont1').innerText = formattedNumber
+                })
+                
+                animateNumber(2350, 3000, 0, function (number) {
+                  const formattedNumber = number.toLocaleString()
+                  document.getElementById('cont2').innerText = formattedNumber
+                })
+                
+                animateNumber(200, 3000, 0, function (number) {
+                  const formattedNumber = number.toLocaleString()
+                  document.getElementById('cont3').innerText = formattedNumber
+                })
+              })
+        }
     };
 
 })(jQuery);
