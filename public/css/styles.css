@@ -97,28 +97,10 @@ max-width: 100%;
 .form-dangky #dang-ky{
     width: 400px;
     padding:30px 20px;
-    position: absolute;
     background: #fff;
     border-radius:8px;
-    top:10%;
-    right: 0;
-}
-.form-dangky h1{
-position: absolute;
-    bottom:20%;
-    left:0;
-    width: 50%;
-    color:#fff;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-.form-dangky h1 p{
-font-size: 1.5rem;
-    margin-top:1rem;
-}
-.form-dangky h1 p a{
-color:#fff;
-text-decoration: underline;
+    margin-top:5vw;
+    margin-left:calc(100% - 400px);
 }
 #dang-ky h2{
     font-weight: bold;
@@ -141,6 +123,48 @@ text-decoration: underline;
     width:100%;
     font-size:1.6rem;
 }
+.shadowh1:after{
+    content: "";
+    left: -120%;
+    top: -80%;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: rgba(46, 145, 230, 0.45);
+    transform: rotate(27deg);
+    -webkit-transform: rotate(27deg);
+    z-index:1;
+}
+.shadowh1{
+    position: absolute;
+    width:60%;
+    height: 100%;
+    overflow: hidden;
+}
+.shadowh1 h1{
+    width: 50%;
+    text-align: center;
+    margin-top:5vw;
+    margin-left:25%;
+    color:#fff;
+    position: relative;
+    z-index: 2;
+}
+.shadowh1 p{
+    color:#fff;
+    width: 50%;
+    margin-top:5vw;
+    margin-left:25%;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+.shadowh1 p span{
+    display: inline-block;
+    width:100%;
+    font-size:3rem;
+}
 @media screen and (max-width:1024px){
     .form-dangky,
     .form-dangky .form-wrap{
@@ -151,27 +175,29 @@ text-decoration: underline;
         width: 100%;
         position: static;
         border-radius: 0 0 8px 8px;
+        margin: 0;
     }
-    .form-dangky h1{
-        position: static;
-        padding: 20vw 10vw 10vw 47vw;
-        left: 0;
-        width: 100%;
-        color: #fff;
+    .shadowh1{
+        position: relative;
+        width: 80%;
+        height: 80%;
+    }
+    .shadowh1:after{
+        left: -120%;
+        top: -130%;
+    }
+    .shadowh1 h1{
+        margin-left: 15%;
         font-size: 2rem;
-        font-weight: bold;
-        text-align: right;
+    }
+    .shadowh1 p{
+        font-size: 1.2rem;
+        margin-left: 2%;
     }
 }
 @media screen and (max-width:767px){
     #header .address{
         display: none;
-    }
-    .form-dangky h1{
-        font-size: 1.2rem;
-    }
-    .form-dangky h1 p{
-        font-size:1rem;
     }
 }
 @media screen and (max-width:520px){
@@ -182,10 +208,6 @@ text-decoration: underline;
         background-position: top center;
         background-size: auto 520px;
     }
-    .form-dangky h1{
-        padding: 50vw 10px 10vw;
-        text-align: center;
-    }
     #header .logo img {
         width: 50px;
         height: 50px;
@@ -193,6 +215,27 @@ text-decoration: underline;
     }
     #header .hotline{
         margin-left:0;
+    }
+    .shadowh1{
+        padding:20px 0;
+    }
+    .shadowh1:after {
+        left: -102%;
+        top: -104%;
+        transform: rotate(16deg);
+        -webkit-transform: rotate(16deg);
+    }
+    .shadowh1 h1 {
+        margin-left: 5%;
+        font-size: 1.6rem;
+        width: 90%;
+    }
+    .shadowh1 p{
+        width: 65%;
+        font-size: 1rem;
+    }
+    .shadowh1 p span{
+        font-size: 2rem;
     }
 }
 .alert-box{
