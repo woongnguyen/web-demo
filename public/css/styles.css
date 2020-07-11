@@ -306,20 +306,19 @@ width:auto;
     height: 19px;
     margin-right:5px;
 }
-.block-intro .row{
-    align-items: center;
-}
 .block-intro .left{
-    flex:70% 0 0;
+    flex:50% 0 0;
 }
 .block-intro .right{
-    flex:30% 0 0;
+    flex:50% 0 0;
 }
 .block-intro2{
-    margin-top:3rem;
-    padding:4rem 0;
-    background: #00ba51;
-    color:#fff;
+    margin-top: 3rem;
+    padding: 4rem 0;
+    background: url(/public/images/banner-grab-for-business.15i2cKa.jpg)no-repeat;
+    color: #fff;
+    background-size: auto 100%;
+    background-position: top right;
 }
 .block-intro2 .row{
     justify-content: space-between;
@@ -372,9 +371,8 @@ width:auto;
         margin-top: 2rem;
         padding:0 20px;
     }
-    .block-intro .row{
-        flex-direction: column-reverse;
-        -webkit-flex-direction: column-reverse;
+    .block-intro .d-flex{
+        flex-direction: column;
     }
     .block-intro2{
         text-align: center;
@@ -425,6 +423,9 @@ width:auto;
     font-size: 1.2em;
     color: #fff;
     padding:0 10px 0 5px;
+}
+#footer figure img{
+    max-width: 125px;
 }
 @media screen and (max-width:767px){
     .footer{
