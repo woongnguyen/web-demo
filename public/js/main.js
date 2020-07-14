@@ -2,6 +2,13 @@
 (function($) {
     $(document).ready(function() {
         taxi.init();
+        $(document).on('click', function(e) {
+            let menuElm = $(".nav-menu");
+            let menuBtn = $('.menu-btn')
+            if(!menuElm.is(e.target) && menuElm.has(e.target).length === 0 && !menuBtn.is(e.target) && menuBtn.has(e.target).length === 0){
+                $('#header').removeClass('isActived');
+            }
+        });
     });
     var taxi = {
         globalvariable:false,
@@ -9,6 +16,7 @@
             this.registerSubmit();
             this.initScrollTop();
             // this.numeffect();
+            this.clickmenu();
         },
         registerSubmit: function(){
             $('#form-dang-ky').submit( function(e){
@@ -58,6 +66,11 @@
                 return false;
             });
         },
+        clickmenu: function(){
+            $('.menu-btn').click(function(){
+                $('#header').addClass('isActived');
+            });
+        }
     };
 
 })(jQuery);
